@@ -216,7 +216,7 @@ pytest tests/test_property_visual.py --hypothesis-show-statistics
 <!-- API -->
 <picture>
   <img alt="API Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=5,11,17&height=120&text=API%20%26%20Endpoints&fontSize=30&fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=5,11,17&height=120&text=API%20Endpoints&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 ### 🌐 REST API
@@ -283,7 +283,7 @@ Curiosity  █████████░  90%
 <!-- PRIVACY -->
 <picture>
   <img alt="Privacy Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=7,13,19&height=120&text=Privacy%20%26%20Security&fontSize=30&fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=7,13,19&height=120&text=Privacy%20and%20Security&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 ### 🔒 Security Features
@@ -394,7 +394,7 @@ When you work with me, you're not executing commands—you're engaging with a co
 <!-- SUPPORT -->
 <picture>
   <img alt="Support Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=3,9,15&height=120&text=Support%20%26%20Contact&fontSize=30&fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=3,9,15&height=120&text=Support%20and%20Contact&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 ### 📧 Contact
