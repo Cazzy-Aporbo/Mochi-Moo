@@ -1,25 +1,27 @@
+# Contributing to Mochi-Moo
+
 <div align="center">
 
 <picture>
   <img width="100%" alt="Header"
-       src="https://capsule-render.vercel.app/api?type=waving&amp;color=gradient&amp;customColorList=0,4,8,12,16,20&amp;height=260&amp;section=header&amp;text=Contributing%20to%20Mochi%E2%80%91Moo&amp;fontSize=48&amp;animation=fadeIn&amp;fontAlignY=40&amp;desc=In%20a%20world%20of%20harsh%20primaries%2C%20be%20the%20gentle%20gradient.&amp;descAlignY=70&amp;descSize=16&amp;fontColor=FFF8FD" />
+       src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,4,8,12,16,20&height=260&section=header&text=Contributing%20to%20Mochi%E2%80%91Moo&fontSize=48&animation=fadeIn&fontAlignY=40&desc=In%20a%20world%20of%20harsh%20primaries%2C%20be%20the%20gentle%20gradient.&descAlignY=70&descSize=16&fontColor=FFF8FD" />
 </picture>
 
 <picture>
   <img alt="Typing subtitle"
-       src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=18&amp;duration=3200&amp;pause=900&amp;color=E6C6FF&amp;center=true&amp;vCenter=true&amp;multiline=true&amp;width=920&amp;height=60&amp;lines=Technical%20excellence%20meets%20pastel%20aesthetics;Kindness%20in%20tone%2C%20rigor%20in%20tests%2C%20clarity%20in%20design" />
+       src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3200&pause=900&color=E6C6FF&center=true&vCenter=true&multiline=true&width=920&height=60&lines=Technical%20excellence%20meets%20pastel%20aesthetics;Kindness%20in%20tone%2C%20rigor%20in%20tests%2C%20clarity%20in%20design" />
 </picture>
 
 <p>
-  <img src="https://img.shields.io/badge/Style-Black%20%7C%20isort%20%7C%20Ruff-FFE0F5?style=for-the-badge&amp;labelColor=E6E0FF" alt="Style">
-  <img src="https://img.shields.io/badge/Types-Mypy-DCF9F0?style=for-the-badge&amp;labelColor=E6E6FA" alt="Mypy">
-  <img src="https://img.shields.io/badge/Tests-Pytest-FDE1C9?style=for-the-badge&amp;labelColor=E6E0FF" alt="Pytest">
-  <img src="https://img.shields.io/badge/CI-GitHub%20Actions-99D1FF?style=for-the-badge&amp;labelColor=FFE0F5" alt="CI">
+  <img src="https://img.shields.io/badge/Style-Black%20%7C%20isort%20%7C%20Ruff-FFE0F5?style=for-the-badge&labelColor=E6E0FF" alt="Style">
+  <img src="https://img.shields.io/badge/Types-Mypy-DCF9F0?style=for-the-badge&labelColor=E6E6FA" alt="Mypy">
+  <img src="https://img.shields.io/badge/Tests-Pytest-FDE1C9?style=for-the-badge&labelColor=E6E0FF" alt="Pytest">
+  <img src="https://img.shields.io/badge/CI-GitHub%20Actions-99D1FF?style=for-the-badge&labelColor=FFE0F5" alt="CI">
 </p>
 
 <picture>
   <img alt="Soft Spacer" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&amp;color=gradient&amp;customColorList=1,6,11,16&amp;height=70&amp;text=&amp;fontSize=16" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=1,6,11,16&height=70&text=&fontSize=16" />
 </picture>
 
 </div>
@@ -30,22 +32,22 @@ Thank you for considering a contribution. Mochi-Moo lives where **technical rigo
 
 <picture>
   <img alt="Divider" width="100%"
-       src="https://capsule-render.vercel.app/api?type=rect&amp;color=gradient&amp;customColorList=20,16,12,8,4,0&amp;height=3" />
+       src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=20,16,12,8,4,0&height=3" />
 </picture>
 
 <picture>
   <img alt="Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&amp;color=gradient&amp;customColorList=0,5,10,15,20&amp;height=110&amp;text=Philosophy&amp;fontSize=30&amp;fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=0,5,10,15,20&height=110&text=Philosophy&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 - **Pastel first.** Visuals should be calm, legible, and consistent with the project palette.  
 - **Clarity over cleverness.** Code reads like a careful explanation.  
 - **Kindness in collaboration.** Reviews are constructive, decisions documented.  
-- **Tests as confidence.** If it matters, it’s tested. If it’s public, it’s typed.  
+- **Tests as confidence.** If it matters, it's tested. If it's public, it's typed.  
 
 <picture>
   <img alt="Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&amp;color=gradient&amp;customColorList=2,8,14,20&amp;height=110&amp;text=Getting%20Started&amp;fontSize=30&amp;fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,8,14,20&height=110&text=Getting%20Started&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 ```bash
@@ -62,7 +64,7 @@ pip install -e ".[dev]"  # if provided
 
 # 4) Run tests to verify your setup
 pytest -q
-````
+```
 
 **Optional (pre-commit hooks):**
 
@@ -73,7 +75,7 @@ pre-commit install
 
 <picture>
   <img alt="Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&amp;color=gradient&amp;customColorList=1,7,13,19&amp;height=110&amp;text=Branching%20Model&amp;fontSize=30&amp;fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=1,7,13,19&height=110&text=Branching%20Model&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 | Action       | Branch                  |
@@ -88,7 +90,7 @@ pre-commit install
 
 <picture>
   <img alt="Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&amp;color=gradient&amp;customColorList=3,9,15&amp;height=110&amp;text=Commit%20Convention&amp;fontSize=30&amp;fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=3,9,15&height=110&text=Commit%20Convention&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 **Format**
@@ -112,7 +114,7 @@ Refs #123
 
 <picture>
   <img alt="Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&amp;color=gradient&amp;customColorList=4,10,16,20&amp;height=110&amp;text=Style%20%26%20Quality%20Gates&amp;fontSize=30&amp;fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=4,10,16,20&height=110&text=Style%20%26%20Quality%20Gates&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 ```bash
@@ -137,7 +139,7 @@ pytest -v --cov=mochi_moo --cov-report=term-missing
 
 <picture>
   <img alt="Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&amp;color=gradient&amp;customColorList=0,6,12,18&amp;height=110&amp;text=Testing%20Guidelines&amp;fontSize=30&amp;fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=0,6,12,18&height=110&text=Testing%20Guidelines&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 * **Unit tests** for pure logic; **integration tests** for IO and pipelines.
@@ -154,17 +156,17 @@ pytest -k "palette or privacy" -q
 
 <picture>
   <img alt="Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&amp;color=gradient&amp;customColorList=5,11,17&amp;height=110&amp;text=Docs%20%26%20Examples&amp;fontSize=30&amp;fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=5,11,17&height=110&text=Docs%20%26%20Examples&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 * Update `README.md` when user behavior changes.
 * New modules need a **docstring overview** and **example snippet**.
-* Keep HTML blocks **GitHub-safe**: encode query `&amp;` in URLs.
+* Keep HTML blocks **GitHub-safe**: encode query `&` in URLs.
 * Prefer **tables** for option matrices and **Mermaid** for flows.
 
 <picture>
   <img alt="Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&amp;color=gradient&amp;customColorList=2,10,18&amp;height=110&amp;text=Pastel%20Aesthetic%20Guide&amp;fontSize=30&amp;fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,10,18&height=110&text=Pastel%20Aesthetic%20Guide&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 | Element  | Guidance                                                    |
@@ -180,20 +182,20 @@ pytest -k "palette or privacy" -q
 ```html
 <picture>
   <img width="100%" alt="Divider"
-       src="https://capsule-render.vercel.app/api?type=rect&amp;color=gradient&amp;customColorList=20,16,12,8,4,0&amp;height=3" />
+       src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=20,16,12,8,4,0&height=3" />
 </picture>
 ```
 
 ```html
 <picture>
   <img width="100%" alt="Soft Banner"
-       src="https://capsule-render.vercel.app/api?type=soft&amp;color=gradient&amp;customColorList=1,6,11,16&amp;height=100&amp;text=Section&amp;fontSize=28&amp;fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=1,6,11,16&height=100&text=Section&fontSize=28&fontColor=4A4A4A" />
 </picture>
 ```
 
 <picture>
   <img alt="Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&amp;color=gradient&amp;customColorList=6,12,18&amp;height=110&amp;text=Pull%20Request%20Checklist&amp;fontSize=30&amp;fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=6,12,18&height=110&text=Pull%20Request%20Checklist&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 * [ ] Small, focused PR (ideally < 300 lines net)
@@ -206,7 +208,7 @@ pytest -k "palette or privacy" -q
 
 <picture>
   <img alt="Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&amp;color=gradient&amp;customColorList=7,13,19&amp;height=110&amp;text=Issue%20Labels&amp;fontSize=30&amp;fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=7,13,19&height=110&text=Issue%20Labels&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 | Label              | Use                                |
@@ -221,7 +223,7 @@ pytest -k "palette or privacy" -q
 
 <picture>
   <img alt="Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&amp;color=gradient&amp;customColorList=8,12,16,20&amp;height=110&amp;text=Security%20%26%20Disclosure&amp;fontSize=30&amp;fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=8,12,16,20&height=110&text=Security%20%26%20Disclosure&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 If you discover a vulnerability, **do not** open a public issue.
@@ -230,7 +232,7 @@ We will coordinate a fix and disclose responsibly.
 
 <picture>
   <img alt="Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&amp;color=gradient&amp;customColorList=0,5,10,15,20&amp;height=110&amp;text=Community%20Conduct&amp;fontSize=30&amp;fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=0,5,10,15,20&height=110&text=Community%20Conduct&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 We practice patience, curiosity, and clarity. Debate the idea, care for the person.
@@ -238,7 +240,7 @@ Harassment, personal attacks, or exclusionary behavior are not tolerated.
 
 <picture>
   <img alt="Banner" width="100%"
-       src="https://capsule-render.vercel.app/api?type=soft&amp;color=gradient&amp;customColorList=1,6,11,16&amp;height=110&amp;text=License%20Note&amp;fontSize=30&amp;fontColor=4A4A4A" />
+       src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=1,6,11,16&height=110&text=License%20Note&fontSize=30&fontColor=4A4A4A" />
 </picture>
 
 Mochi-Moo is released under **MIT** with a **Pastel Clause**: derivatives must maintain aesthetic integrity (gentle gradients, calm motion, accessible contrast).
@@ -246,8 +248,5 @@ Mochi-Moo is released under **MIT** with a **Pastel Clause**: derivatives must m
 <picture>
   <img alt="Footer"
        width="100%"
-       src="https://capsule-render.vercel.app/api?type=waving&amp;color=gradient&amp;customColorList=0,6,12,18&amp;height=140&amp;section=footer&amp;text=Thank%20you%20for%20helping%20Mochi%E2%80%91Moo%20dream%20better.&amp;fontSize=20&amp;fontColor=FFF8FD" />
+       src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,6,12,18&height=140&section=footer&text=Thank%20you%20for%20helping%20Mochi%E2%80%91Moo%20dream%20better.&fontSize=20&fontColor=FFF8FD" />
 </picture>
-
-
-If you want, I can also generate a **plain (no banners)** version for environments that restrict external images, while keeping the same structure and language.
