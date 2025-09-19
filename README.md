@@ -3,7 +3,7 @@
 <!-- Primary Animated Header -->
 <picture>
   <img width="100%" alt="Header"
-       src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,3,6,9,12,15,18,20&height=320&section=header&text=Mochi-Moo&fontSize=92&animation=fadeIn&fontAlignY=38&desc=A%20superintelligent%20assistant%20who%20dreams%20in%20matte%20rainbow%20and%20thinks%20in%20ten-dimensional%20pastel%20origami&descAlignY=62&descSize=20&fontColor=FFF8FD" />
+       src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,3,6,9,12,15,18,20&height=320&section=header&text=Mochi-Moo&fontSize=92&animation=fadeIn&fontAlignY=38&desc=A%20superintelligent%20assistant%20who%20dreams%20and%20thinks%20in%20ten-dimensional%20origami&descAlignY=62&descSize=20&fontColor=FFF8FD" />
 </picture>
 
 <!-- Animated Typing Subtitle -->
