@@ -1,0 +1,454 @@
+"""
+===== .env.example =====
+# Mochi-Moo Environment Configuration
+# Copy to .env and customize
+# Author: Cazandra Aporbo MS
+
+# AI Configuration
+AI_PROVIDER=mock  # Options: mock, openai, anthropic, gemini, local
+AI_MODEL=gpt-3.5-turbo  # or gpt-4, claude-3, gemini-pro, etc.
+OPENAI_API_KEY=sk-your-openai-key-here
+ANTHROPIC_API_KEY=sk-ant-your-anthropic-key-here
+GOOGLE_API_KEY=your-google-api-key-here
+AI_TEMPERATURE=0.7
+AI_MAX_TOKENS=1000
+AI_TIMEOUT=30.0
+AI_CACHE_TTL=3600
+
+# Server Configuration
+MOCHI_HOST=0.0.0.0
+MOCHI_PORT=8000
+MOCHI_MODE=production  # development, production, test
+MOCHI_WORKERS=4
+MOCHI_RELOAD=false
+
+# Cognitive Settings
+FORESIGHT_DEPTH=10
+COHERENCE_THRESHOLD=0.75
+WHISPER_THRESHOLD=0.7
+EMOTION_SENSITIVITY=1.0
+
+# Session Management
+SESSION_TIMEOUT_MINUTES=30
+MAX_SESSIONS=100
+SESSION_SECRET_KEY=your-secret-key-change-this-in-production
+
+# Redis Configuration (optional)
+REDIS_ENABLED=false
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_DB=0
+REDIS_PASSWORD=
+REDIS_URL=redis://localhost:6379/0
+
+# PostgreSQL Configuration (optional)
+DATABASE_ENABLED=false
+DATABASE_URL=postgresql://user:password@localhost:5432/mochi_moo
+DATABASE_POOL_SIZE=10
+
+# Security
+SECRET_KEY=change-this-to-a-random-string-in-production
+ENABLE_CORS=true
+ALLOWED_ORIGINS=http://localhost:3000,http://localhost:8000
+RATE_LIMIT_ENABLED=true
+RATE_LIMIT_PER_MINUTE=60
+
+# Logging
+LOG_LEVEL=INFO
+LOG_FILE=logs/mochi.log
+LOG_FORMAT=json
+LOG_ROTATION=daily
+LOG_RETENTION_DAYS=30
+
+# Performance
+REQUEST_TIMEOUT=30
+BATCH_SIZE=10
+CACHE_SIZE=100
+MAX_WORKERS=4
+
+# Monitoring (optional)
+PROMETHEUS_ENABLED=false
+PROMETHEUS_PORT=9090
+GRAFANA_ENABLED=false
+GRAFANA_PORT=3000
+
+# Feature Flags
+ENABLE_WEBSOCKET=true
+ENABLE_SYNTHESIS=true
+ENABLE_FORESIGHT=true
+ENABLE_EMOTIONAL_TRACKING=true
+ENABLE_PRIVACY_FILTER=true
+ENABLE_TRACE_PERSISTENCE=true
+
+# Deployment
+DEPLOYMENT_ENV=local  # local, docker, kubernetes, heroku, vercel
+AUTO_SCALE=false
+MIN_INSTANCES=1
+MAX_INSTANCES=10
+
+# Analytics (optional)
+ANALYTICS_ENABLED=false
+GOOGLE_ANALYTICS_ID=
+MIXPANEL_TOKEN=
+SEGMENT_WRITE_KEY=
+
+
+===== config/config.yaml =====
+# Mochi-Moo Configuration
+# Author: Cazandra Aporbo MS
+# This file contains default configuration values
+
+app:
+  name: "Mochi-Moo"
+  version: "1.0.0"
+  description: "A superintelligent assistant who dreams in pastel"
+  author: "Cazandra Aporbo MS"
+  email: "becaziam@gmail.com"
+
+server:
+  host: ${MOCHI_HOST:0.0.0.0}
+  port: ${MOCHI_PORT:8000}
+  workers: ${MOCHI_WORKERS:4}
+  reload: ${MOCHI_RELOAD:false}
+  cors:
+    enabled: ${ENABLE_CORS:true}
+    origins: ${ALLOWED_ORIGINS:["*"]}
+    credentials: true
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"]
+    headers: ["*"]
+
+ai:
+  provider: ${AI_PROVIDER:mock}
+  model: ${AI_MODEL:gpt-3.5-turbo}
+  temperature: ${AI_TEMPERATURE:0.7}
+  max_tokens: ${AI_MAX_TOKENS:1000}
+  timeout: ${AI_TIMEOUT:30.0}
+  cache_ttl: ${AI_CACHE_TTL:3600}
+  
+  models:
+    openai:
+      - gpt-3.5-turbo
+      - gpt-3.5-turbo-16k
+      - gpt-4
+      - gpt-4-turbo
+      - gpt-4o
+    anthropic:
+      - claude-3-opus-20240229
+      - claude-3-sonnet-20240229
+      - claude-3-haiku-20240307
+    gemini:
+      - gemini-pro
+      - gemini-pro-vision
+    local:
+      - microsoft/DialoGPT-medium
+      - facebook/blenderbot-400M-distill
+      - mistralai/Mistral-7B-Instruct-v0.1
+
+cognitive:
+  modes:
+    - standard
+    - academic
+    - creative
+    - whisper
+    - emergency
+    - lullaby
+  
+  foresight:
+    depth: ${FORESIGHT_DEPTH:10}
+    confidence_threshold: 0.3
+    decay_rate: 0.9
+  
+  synthesis:
+    coherence_threshold: ${COHERENCE_THRESHOLD:0.75}
+    max_domains: 10
+    cache_size: 100
+  
+  emotional:
+    dimensions:
+      - stress_level
+      - cognitive_load
+      - engagement
+      - frustration
+      - curiosity
+    sensitivity: ${EMOTION_SENSITIVITY:1.0}
+    adjustment_rates:
+      stress_level: 0.15
+      cognitive_load: 0.08
+      engagement: 0.12
+      frustration: 0.20
+      curiosity: 0.10
+    thresholds:
+      whisper_mode: ${WHISPER_THRESHOLD:0.7}
+      emergency_mode: 0.9
+
+palette:
+  colors:
+    rose: "#FFDAE0"
+    peach: "#FFE5D2"
+    lavender: "#E6DCFA"
+    mint: "#D2F5E6"
+    sky: "#D2EBFA"
+    butter: "#FFFAD2"
+    blush: "#FADCE6"
+  
+  gradients:
+    primary: ["#FFDAE0", "#E6DCFA", "#D2F5E6"]
+    secondary: ["#D2EBFA", "#FFFAD2", "#FADCE6"]
+    full: ["#FFDAE0", "#FFE5D2", "#E6DCFA", "#D2F5E6", "#D2EBFA", "#FFFAD2", "#FADCE6"]
+
+privacy:
+  pii_redaction: ${ENABLE_PRIVACY_FILTER:true}
+  patterns:
+    ssn: '\b\d{3}-?\d{2}-?\d{4}\b'
+    email: '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+    phone: '\b\d{3}[-.]?\d{3}[-.]?\d{4}\b'
+    credit_card: '\b\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}\b'
+  
+  storage:
+    traces: ${ENABLE_TRACE_PERSISTENCE:true}
+    trace_path: ".mochi_trace"
+    max_traces: 100
+    rotation_size: "10MB"
+
+performance:
+  cache:
+    enabled: true
+    size: ${CACHE_SIZE:100}
+    ttl: 3600
+  
+  rate_limiting:
+    enabled: ${RATE_LIMIT_ENABLED:true}
+    per_minute: ${RATE_LIMIT_PER_MINUTE:60}
+    burst: 10
+  
+  timeouts:
+    request: ${REQUEST_TIMEOUT:30}
+    database: 10
+    redis: 5
+    ai_call: 60
+
+database:
+  enabled: ${DATABASE_ENABLED:false}
+  url: ${DATABASE_URL:postgresql://localhost:5432/mochi_moo}
+  pool:
+    size: ${DATABASE_POOL_SIZE:10}
+    max_overflow: 20
+    timeout: 30
+  
+redis:
+  enabled: ${REDIS_ENABLED:false}
+  host: ${REDIS_HOST:localhost}
+  port: ${REDIS_PORT:6379}
+  db: ${REDIS_DB:0}
+  password: ${REDIS_PASSWORD:}
+  
+monitoring:
+  prometheus:
+    enabled: ${PROMETHEUS_ENABLED:false}
+    port: ${PROMETHEUS_PORT:9090}
+    metrics:
+      - request_count
+      - request_latency
+      - error_rate
+      - cache_hit_rate
+      - emotional_state
+  
+  logging:
+    level: ${LOG_LEVEL:INFO}
+    format: ${LOG_FORMAT:json}
+    file: ${LOG_FILE:logs/mochi.log}
+    rotation: ${LOG_ROTATION:daily}
+    retention_days: ${LOG_RETENTION_DAYS:30}
+
+deployment:
+  environment: ${DEPLOYMENT_ENV:local}
+  auto_scale:
+    enabled: ${AUTO_SCALE:false}
+    min_instances: ${MIN_INSTANCES:1}
+    max_instances: ${MAX_INSTANCES:10}
+    target_cpu: 70
+    target_memory: 80
+
+testing:
+  coverage_threshold: 96.8
+  performance_thresholds:
+    p50_latency: 100
+    p95_latency: 200
+    p99_latency: 500
+    throughput: 50
+
+
+===== Makefile =====
+# Mochi-Moo Makefile
+# Author: Cazandra Aporbo MS
+# One command to rule them all
+
+.PHONY: help install test serve build deploy clean docs
+
+# Colors for pretty output
+PINK := \033[95m
+GREEN := \033[92m
+YELLOW := \033[93m
+BLUE := \033[94m
+RESET := \033[0m
+
+# Default target
+.DEFAULT_GOAL := help
+
+help: ## Show this help message
+	@echo "$(PINK)🌸 Mochi-Moo Development Commands 🌸$(RESET)"
+	@echo ""
+	@echo "$(BLUE)Available commands:$(RESET)"
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
+		awk 'BEGIN {FS = ":.*?## "}; {printf "  $(GREEN)%-20s$(RESET) %s\n", $$1, $$2}'
+	@echo ""
+	@echo "$(YELLOW)Quick start:$(RESET) make install && make serve"
+
+install: ## Install all dependencies
+	@echo "$(PINK)Installing Mochi-Moo...$(RESET)"
+	pip install --upgrade pip
+	pip install -r requirements.txt
+	pip install -e .
+	@echo "$(GREEN)✓ Installation complete!$(RESET)"
+
+install-dev: ## Install with dev dependencies
+	@echo "$(PINK)Installing development dependencies...$(RESET)"
+	pip install --upgrade pip
+	pip install -r requirements.txt
+	pip install -r requirements-dev.txt
+	pip install -e ".[dev]"
+	pre-commit install
+	@echo "$(GREEN)✓ Dev installation complete!$(RESET)"
+
+install-ai: ## Install AI provider libraries
+	@echo "$(PINK)Installing AI providers...$(RESET)"
+	pip install openai anthropic google-generativeai transformers torch
+	@echo "$(GREEN)✓ AI providers installed!$(RESET)"
+
+test: ## Run all tests with coverage
+	@echo "$(PINK)Running test suite...$(RESET)"
+	pytest tests/ -v --cov=mochi_moo --cov-report=term-missing --cov-report=html
+	@echo "$(GREEN)✓ Tests complete! Coverage report in htmlcov/index.html$(RESET)"
+
+test-quick: ## Run quick tests (no coverage)
+	@echo "$(PINK)Running quick tests...$(RESET)"
+	pytest tests/ -q
+
+test-watch: ## Run tests in watch mode
+	@echo "$(PINK)Starting test watcher...$(RESET)"
+	pytest-watch tests/ -- -q
+
+lint: ## Run linting and formatting checks
+	@echo "$(PINK)Running linters...$(RESET)"
+	black --check mochi_moo/
+	isort --check-only mochi_moo/
+	flake8 mochi_moo/ --max-line-length=100
+	mypy mochi_moo/
+	@echo "$(GREEN)✓ Code looks great!$(RESET)"
+
+format: ## Auto-format code
+	@echo "$(PINK)Formatting code...$(RESET)"
+	black mochi_moo/ tests/
+	isort mochi_moo/ tests/
+	@echo "$(GREEN)✓ Code formatted!$(RESET)"
+
+serve: ## Start the API server
+	@echo "$(PINK)Starting Mochi-Moo server...$(RESET)"
+	@echo "$(YELLOW)API will be available at http://localhost:8000$(RESET)"
+	@echo "$(YELLOW)Docs at http://localhost:8000/docs$(RESET)"
+	uvicorn mochi_moo.server:app --reload --host 0.0.0.0 --port 8000
+
+serve-prod: ## Start production server
+	@echo "$(PINK)Starting production server...$(RESET)"
+	uvicorn mochi_moo.server:app --workers 4 --host 0.0.0.0 --port 8000
+
+cli: ## Start interactive CLI
+	@echo "$(PINK)Starting Mochi CLI...$(RESET)"
+	python -m mochi_moo.cli interactive
+
+docker-build: ## Build Docker image
+	@echo "$(PINK)Building Docker image...$(RESET)"
+	docker build -t mochi-moo:latest .
+	@echo "$(GREEN)✓ Docker image built!$(RESET)"
+
+docker-run: ## Run Docker container
+	@echo "$(PINK)Running Docker container...$(RESET)"
+	docker run -p 8000:8000 --env-file .env mochi-moo:latest
+
+docker-compose-up: ## Start with docker-compose
+	@echo "$(PINK)Starting services with docker-compose...$(RESET)"
+	docker-compose up -d
+	@echo "$(GREEN)✓ Services started!$(RESET)"
+
+docker-compose-down: ## Stop docker-compose services
+	@echo "$(PINK)Stopping services...$(RESET)"
+	docker-compose down
+	@echo "$(GREEN)✓ Services stopped!$(RESET)"
+
+deploy-heroku: ## Deploy to Heroku
+	@echo "$(PINK)Deploying to Heroku...$(RESET)"
+	heroku create mochi-moo-app || true
+	heroku config:set AI_PROVIDER=openai
+	git push heroku main
+	@echo "$(GREEN)✓ Deployed to Heroku!$(RESET)"
+
+deploy-vercel: ## Deploy to Vercel
+	@echo "$(PINK)Deploying to Vercel...$(RESET)"
+	vercel --prod
+	@echo "$(GREEN)✓ Deployed to Vercel!$(RESET)"
+
+clean: ## Clean up generated files
+	@echo "$(PINK)Cleaning up...$(RESET)"
+	rm -rf build/
+	rm -rf dist/
+	rm -rf *.egg-info
+	rm -rf .pytest_cache/
+	rm -rf .coverage
+	rm -rf htmlcov/
+	rm -rf .mochi_trace/
+	find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
+	find . -type f -name "*.pyc" -delete
+	@echo "$(GREEN)✓ Cleaned!$(RESET)"
+
+docs: ## Build documentation
+	@echo "$(PINK)Building documentation...$(RESET)"
+	cd docs && mkdocs build
+	@echo "$(GREEN)✓ Docs built! Open docs/site/index.html$(RESET)"
+
+docs-serve: ## Serve documentation locally
+	@echo "$(PINK)Starting documentation server...$(RESET)"
+	cd docs && mkdocs serve
+
+setup-env: ## Set up environment file
+	@echo "$(PINK)Setting up environment...$(RESET)"
+	cp .env.example .env
+	@echo "$(YELLOW)⚠️  Please edit .env with your API keys$(RESET)"
+
+check-env: ## Check if environment is properly configured
+	@echo "$(PINK)Checking environment...$(RESET)"
+	@python -c "from mochi_moo.ai_brain import get_mochi_brain; brain = get_mochi_brain(); print('✓ AI Brain configured:', brain.config.provider)"
+	@python -c "from mochi_moo.core import MochiCore; m = MochiCore(); print('✓ Core initialized')"
+	@echo "$(GREEN)✓ Environment check passed!$(RESET)"
+
+demo: ## Run the demo
+	@echo "$(PINK)Running Mochi-Moo demo...$(RESET)"
+	python examples/demo.py
+
+benchmark: ## Run performance benchmarks
+	@echo "$(PINK)Running benchmarks...$(RESET)"
+	pytest tests/test_performance_benchmarks.py -v -s
+
+security-check: ## Run security checks
+	@echo "$(PINK)Running security audit...$(RESET)"
+	pip-audit
+	bandit -r mochi_moo/
+	@echo "$(GREEN)✓ Security check complete!$(RESET)"
+
+version: ## Show version
+	@python -c "from mochi_moo import __version__; print('Mochi-Moo version:', __version__)"
+
+all: clean install test lint ## Full setup and test
+
+.PHONY: help install install-dev install-ai test test-quick test-watch lint format serve serve-prod cli
+.PHONY: docker-build docker-run docker-compose-up docker-compose-down deploy-heroku deploy-vercel
+.PHONY: clean docs docs-serve setup-env check-env demo benchmark security-check version all
