@@ -1,5 +1,5 @@
 """
-AI Brain Integration for Mochi-Moo - Enhanced Edition
+AI Brain Integration for Mochi-Moo 
 Author: Cazandra Aporbo MS
 Updated October 2025
 
