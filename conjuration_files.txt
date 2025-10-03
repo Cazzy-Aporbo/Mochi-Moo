@@ -1,8 +1,7 @@
 """
-===== .env.example =====
+ .env.example 
 # Mochi-Moo Environment Configuration
 # Copy to .env and customize
-# Author: Cazandra Aporbo MS
 
 # AI Configuration
 AI_PROVIDER=mock  # Options: mock, openai, anthropic, gemini, local
@@ -93,9 +92,7 @@ MIXPANEL_TOKEN=
 SEGMENT_WRITE_KEY=
 
 
-===== config/config.yaml =====
 # Mochi-Moo Configuration
-# Author: Cazandra Aporbo MS
 # This file contains default configuration values
 
 app:
