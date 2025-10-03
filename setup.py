@@ -123,10 +123,8 @@ setup(
     zip_safe=False,
 )
 
-# ===== requirements.txt =====
+# requirements.txt 
 # Core dependencies for Mochi-Moo
-# Author: Cazandra Aporbo MS
-# Generated: 2025
 
 # Core numerical and scientific computing
 numpy>=1.24.0
