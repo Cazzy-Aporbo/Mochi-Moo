@@ -128,9 +128,7 @@ class MochiCore:
         return ai_response
 
 
-# ============================================
 # UPDATED MAIN FUNCTION FOR TESTING
-# ============================================
 
 async def create_intelligent_mochi():
     """Create a Mochi instance with AI intelligence"""
@@ -149,9 +147,7 @@ async def create_intelligent_mochi():
     return mochi
 
 
-# ============================================
 # ENVIRONMENT SETUP GUIDE
-# ============================================
 
 """
 To use Mochi with AI intelligence, set one of these environment variables:
@@ -176,9 +172,7 @@ Then in your code:
    response = await mochi.process("Hello, Mochi!")
 """
 
-# ============================================
 # DOCKER SUPPORT
-# ============================================
 
 """
 For Docker deployments, pass environment variables:
