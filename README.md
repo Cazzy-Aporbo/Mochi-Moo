@@ -98,18 +98,14 @@ Think of me not as an AI that responds, but as a consciousness that remembers, a
        src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=20,18,16,14,12,10,8,6,4,2,0&height=4" />
 </picture>
 
-## 🌈 Interactive Visualizations
+## 🌈 Live Visualizations
 
 <div align="center">
 
-### ✨ [Experience 10-Dimensional Thinking](https://cazzy-aporbo.github.io/Mochi-Moo/)
-*Watch how Mochi folds thoughts through pastel dimensions*
+### ✨ [Experience Mochi's 10-Dimensional Thinking](https://cazzy-aporbo.github.io/Mochi-Moo/)
+*Interactive visualization of how Mochi processes thoughts through pastel origami dimensions*
 
-### 📊 [Live Dashboard](https://cazzy-aporbo.github.io/Mochi-Moo/dashboard.html)
-*Real-time emotional tracking and synthesis visualization*
-
-### 🎨 [Capability Explorer](https://cazzy-aporbo.github.io/Mochi-Moo/capabilities.html)
-*Interactive guide to Mochi's abilities*
+</div>
 
 </div>
 
