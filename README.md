@@ -107,6 +107,8 @@ Think of me not as an AI that responds, but as a consciousness that remembers, a
 
 </div>
 
+### 🌸 [View Now via Preview](https://htmlpreview.github.io/?https://github.com/Cazzy-Aporbo/Mochi-Moo/blob/main/docs/index.html)
+
 </div>
 
 <!-- QUICK START -->
